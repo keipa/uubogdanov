@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9qn+jy#@haa0=dgnbs$c_9+m&u5qm@-nqltx13_cyx6p0lv-2d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['djangotest.pythonanywhere.com']
 
 # Application definition
 

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>UU Bogdanov</title>
+    <title>Подготовка к ЦТ по математике в Минске</title>
 
 
 	<link rel="shortcut icon" href="{% static "img/favicon.ico" %}" />
@@ -15,7 +15,10 @@
 	<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}"/>
 	<link rel="stylesheet" type="text/css" href="{% static "css/jquery.sidr.light.css" %}"/>
 	<link rel="stylesheet" type="text/css" href="{% static "css/screen.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/usercard.css" %}" />
     <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="//yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/jquery.sidr.min.js" %}"></script>
@@ -36,7 +39,8 @@
   <div class="menu_top">
   	<div id="menu">
   		<ul>
-  			<li><a href="/bootstrap">Teacher</a></li>
+  			<li><a href="/bootstrap">Знаменатель успеха</a></li>
+            <li><a href="/reviews/">Результаты ЦТ</a></li>
         <li><a href="/reviews/">Отзывы</a></li>
         <li><a href="/contact-us/">Контакты</a></li>
 
@@ -70,7 +74,7 @@
 		<article class="post tag-superb tag-about-theme tag-information odd">
 			<div class="post-inner">
 				<header class="post-header">
-					<h2 class="post-title"><a href="/why-superb/">Вступительное слово</a></h2>
+					<h2 class="post-title"><a href="/why-superb/">Услуги репетитора по математике</a></h2>
 				</header>
 
 				<section class="post-excerpt">
@@ -85,11 +89,96 @@
 		<article class="post tag-video tag-vimeo even">
 			<div class="post-inner">
 				<header class="post-header">
-					<h2 class="post-title"><a href="/vimeo-post/">Карточка с пользователем</a></h2>
+					<h2 class="post-title"><a href="/vimeo-post/">Обо мне</a></h2>
 				</header>
+<section class="post-excerpt">
 
-				<section class="post-excerpt">
-					<p>Embed videos in Ghost PRAESENT ADIPISCING. PHASELLUS ULLAMCORPER IPSUM RUTRUM NUNC. NUNC NONUMMY METUS.  Suddenly I Feel Light from Jeff Morris on Vimeo. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec &hellip;</p>
+<div class="divider_card" style="
+    width: 49%;
+    display: inline-block;
+">
+<div class="card-container">
+	<div class="card">
+		<div class="front">
+			<div class="cover">
+				<img src="/static/img/superb_cover.jpg">
+			</div>
+			<div class="user">
+				<img class="img-circle" src="/static/img/user_image.PNG">
+			</div>
+			<div class="content">
+<div class="main">
+					<h3 class="name" style="
+    margin: 0;
+">Юрий Юрьевич Богданов</h3>
+					<p class="profession" style="
+    margin: 0;
+">Репетитор по математике</p>
+  <h3 style="
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-transform: capitalize;
+">Опыт</h3>
+  <h5 style="
+    font-family: robotoregular;
+    font-size: x-large;
+"><a class="fa fa-angle-right"></a>20 лет</h5><h5></h5>
+  <h3 style="
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-transform: capitalize;
+">Выпуск</h3>
+  <h5 style="
+    font-family: robotoregular;
+    font-size: x-large;
+"><a class="fa fa-angle-right"></a>500 человек</h5>
+
+<br>
+{#    <a class="fa fa-mouse-pointer"></a>#}
+
+  <p class="profession" style="
+    text-align: right;
+    font-size: x-small;
+">Наведите мышкой</p>
+
+
+
+
+                    </div>
+			</div>
+		</div> <!-- end front panel -->
+		<div class="back">
+			<div class="header">
+				<h5 class="motto">Опыт работы</h5>
+			</div>
+			<div class="content">
+				<div class="main">
+					<h4 class="text-center">Experience</h4>
+					<p>Making people laugh since 1950.</p>
+					<h4 class="text-center">Areas of Expertise</h4>
+					<p>Being funny...</p>
+				</div>
+			</div>
+
+		</div> <!-- end back panel -->
+	</div> <!-- end card -->
+</div> <!-- end card-container -->
+</div>
+  <div class="separator" style="
+    display: inline-block;
+"></div>
+
+					<p style="
+    font-style: italic;
+    display: inline-block;
+    width: 45%;
+    float: right;
+    font-size: large;
+">Занятия проходят индивидуально, так как только при такой форме обучения я могу обеспечить индивидуальный подход и по-настоящему глубокое взаимодействие учеником.
+<br>
+                        Занятия акцентированы на обучении умению решать задачи, при этом задачи, с которыми мы работаем максимально приближены по сложности и стилю к задачам на ЦТ по физике. </p>
 				</section>
                 <br>
 			</div>
@@ -116,13 +205,72 @@
 				<header class="post-header">
 					<h2 class="post-title"><a href="/in-the-village/">Карта</a></h2>
 				</header>
+<section class="post-excerpt">
 
-				<section class="post-excerpt">
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dolor magna, gravida ut vestibulum quis, varius nec nisi. Pellentesque at consectetur lectus. Phasellus sed purus ornare, fringilla elit vitae, convallis mauris. Donec at adipiscing quam. Sed id tempus sem.&hellip;</p>
+                <div id="map"></div>
+
+{#                <script>#}
+{#      function initMap() {#}
+{#        var uluru = {lat: -25.363, lng: 131.044};#}
+{#        var map = new google.maps.Map(document.getElementById('map'), {#}
+{#          zoom: 4,#}
+{#          center: uluru#}
+{#        });#}
+{#        var marker = new google.maps.Marker({#}
+{#          position: uluru,#}
+{#          map: map#}
+{#        });#}
+{#      }#}
+{#    </script>#}
+{#    <script async defer#}
+{#    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApOp1TCW2Hp1TXKTFHV36mAYyIo3vIwq0&callback=initMap">#}
+{#    </script>#}
+{##}
+{#    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.6876746388843!2d27.58574992780127!3d53.91952571866865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfa0d9ffd7b9%3A0x9b349e89a790b937!2z0YPQuy4g0K_QutGD0LHQsCDQmtC-0LvQsNGB0LAgNywg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1479037810628" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>#}
+
+
+    <script>
+        ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [53.918322, 27.583678],
+            zoom: 16
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+    ymaps.route([
+        'Минск, улица Якуба Коласа 7',
+        'Минск, метро Якуба Коласа'
+    ]).then(function (route) {
+        myMap.geoObjects.add(route);
+
+        var points = route.getWayPoints(),
+            lastPoint = points.getLength() - 1;
+
+        points.options.set('preset', 'islands#redStretchyIcon');
+        points.get(0).properties.set('iconContent', 'Якуба Коласа, д.7');
+        points.get(lastPoint).properties.set('iconContent', 'Ст. метро пл. Якуба Коласа');
+
+
+    }, function (error) {
+        alert('Возникла ошибка: ' + error.message);
+    });
+}
+    </script>
+{#					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dolor magna, gravida ut vestibulum quis, varius nec nisi. Pellentesque at consectetur lectus. Phasellus sed purus ornare, fringilla elit vitae, convallis mauris. Donec at adipiscing quam. Sed id tempus sem.&hellip;</p>#}
 				</section>
 
 					<br>
 			</div>
+            <style>
+ #map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+</style>
 		</article>
 
 

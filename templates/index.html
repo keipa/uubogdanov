@@ -228,7 +228,6 @@
                     this.position = 1;
                     this.rootNode = $(rootElementSelector);
                     this.slides = this.rootNode.children();
-{#                    this.rootNode.append("<div class='move previous'></div><div class='move next'></div>");#}
 
                     SlideUi.prototype.set_position = function (position) {
                         this.position = position % (this.slides.length - 1);
@@ -236,7 +235,7 @@
                         this.set_slide_state(this.position);
                         var slideWidth = this.slides.first().outerWidth();
                         var viewportWidth = $(window).width();
-                        var marginLeft = (viewportWidth - slideWidth) / 2.2;
+                        var marginLeft = (viewportWidth - slideWidth) / 2;
                         this.rootNode.css('margin-left', -this.position * slideWidth + marginLeft);
                         return this.position;
                     }

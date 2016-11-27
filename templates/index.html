@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/jquery.sidr.light.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/screen.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/usercard.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/slidingcards.css" %}"/>
+
     <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="//yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
@@ -195,6 +197,104 @@
     </article>
 
 
+        <article class="post tag-video tag-youtube odd">
+        <div class="post-inner">
+            <header class="post-header">
+                <h2 class="post-title"><a href="/youtube-post/">Отзывы</a></h2>
+            </header>
+
+
+        </div>
+        {#	reviews///////////////////////////////////////////#}
+
+        <section class="slide-ui">
+            {% for note in reviews %}
+            <div class="slide">
+                <h2>{{ note.title }}</h2>
+                <p class="ingress">{{ note.name }}</p>
+                <div class="content">
+                    {{ note.content }}
+                </div>
+            </div>
+            {% endfor %}
+
+            <br>
+            <br>
+
+            <script>
+
+                function SlideUi(rootElementSelector) {
+                    console.log(this);
+                    this.position = 1;
+                    this.rootNode = $(rootElementSelector);
+                    this.slides = this.rootNode.children();
+{#                    this.rootNode.append("<div class='move previous'></div><div class='move next'></div>");#}
+
+                    SlideUi.prototype.set_position = function (position) {
+                        this.position = position % (this.slides.length - 1);
+                        console.log(this.position)
+                        this.set_slide_state(this.position);
+                        var slideWidth = this.slides.first().outerWidth();
+                        var viewportWidth = $(window).width();
+                        var marginLeft = (viewportWidth - slideWidth) / 2.2;
+                        this.rootNode.css('margin-left', -this.position * slideWidth + marginLeft);
+                        return this.position;
+                    }
+                    SlideUi.prototype.set_slide_state = function (i) {
+                        var slide = this.slides.eq(i)
+                        this.slides.removeClass('active');
+                        slide.addClass('active');
+                    }
+                    SlideUi.prototype.next = function () {
+                        this.position = this.position + 1 % this.slides.length;
+                        return this.set_position(this.position);
+                    }
+                    SlideUi.prototype.prev = function () {
+                        this.position = this.position - 1;
+                        if (this.position < 0) this.position = this.slides.length - 2;
+                        return this.set_position(this.position);
+                    }
+
+                    self = this;
+                    $(window).on('resize', function (evt) {
+                        self.set_position(self.position);
+                    });
+                    this.slides.on('click', function (evt) {
+                        var i = $(this).index()
+                        self.set_position(i);
+                    });
+                    $(document).on('keydown', function (evt) {
+                        if (evt.which == 37) self.prev();
+                        if (evt.which == 39) self.next();
+                        // self.set_position(1);
+                    });
+                    this.rootNode.on('click', '.move', function (evt) {
+                        if ($(this).hasClass('previous')) self.prev();
+                        if ($(this).hasClass('next')) self.next();
+                        // self.set_position(1);
+                    });
+                }
+
+                var slideui = new SlideUi('.slide-ui');
+                slideui.set_position(0);
+            </script>
+
+            <svg height="0">
+                <mask id="mask_fade_out" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                    <linearGradient id="fade_right_svg_gradient" gradientUnits="objectBoundingBox" x2="0" y2="1">
+                        <stop stop-color="white" stop-opacity="1" offset="0"></stop>
+                        <stop stop-color="white" stop-opacity="0" offset="0.7"></stop>
+                    </linearGradient>
+                    <rect x="0" y="0" width="1" height="1" fill="url(#fade_right_svg_gradient)"></rect>
+                </mask>
+            </svg>
+        </section>
+            {#	reviews///////////////////////////////////////////#}
+
+
+
+    </article>
+
     <article class="post tag-video tag-youtube odd">
         <div class="post-inner">
             <header class="post-header">
@@ -215,21 +315,7 @@
     </article>
 
 
-    <article class="post tag-video tag-youtube odd">
-        <div class="post-inner">
-            <header class="post-header">
-                <h2 class="post-title"><a href="/youtube-post/">Отзывы</a></h2>
-            </header>
 
-            <section class="post-excerpt">
-                <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-                    nisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient &hellip;</p>
-            </section>
-            <br>
-
-        </div>
-    </article>
 
 
     <article class="post tag-images tag-examples even">

@@ -1,0 +1,98 @@
+
+.slide-ui {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 1000%;
+  /*margin-top: 5em;*/
+    margin-left: 261.636px;
+  padding: 0.9em 0 0.9em 0.9em;
+  -webkit-transition: margin .6s;
+  transition: margin .6s;
+        margin-bottom: 36px;
+}
+.slide-ui::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.slide-ui .previous::before {
+  left: .5em;
+  content: "\f3d2";
+}
+.slide-ui .next::before {
+  right: .5em;
+  content: "\f3d3";
+}
+.slide-ui .previous:hover::before,
+.slide-ui .next:hover::before {
+  color: #7cdab5;
+  background-color: rgba(25, 87, 63, 0.6);
+}
+.slide-ui .previous::before,
+.slide-ui .next::before {
+  display: block;
+  position: fixed;
+  z-index: 20;
+  top: 5em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2.5em;
+  text-align: center;
+  height: 2.5em;
+  line-height: 2.5em;
+  font-size: 32px;
+  border-radius: 50%;
+  background: rgba(48, 48, 48, 0.6);
+  color: white;
+  cursor: pointer;
+  font-family: Ionicons;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+.slide-ui .slide {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  width: 34em;
+  padding: 1em 2em;
+    margin: 0 0.9em 0 0;
+  max-height: 13em;
+  background-color: #fafafa;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
+  -webkit-transition: all .8s linear;
+  transition: all .8s linear;
+  cursor: pointer;
+}
+.slide-ui .slide.active {
+  max-height: 1000px;
+  cursor: initial;
+}
+.slide-ui .slide:hover,
+.slide-ui .slide.active {
+  background-color: white;
+  color: black;
+}
+.slide-ui .slide .content {
+  opacity: 0.6;
+  font-size: 0.7em;
+  line-height: 1.5;
+  font-weight: 400;
+  max-height: 5em;
+  overflow: hidden;
+  -webkit-transition: all .8s linear;
+  transition: all .8s linear;
+  -webkit-mask: url(#mask_fade_out);
+          mask: url(#mask_fade_out);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(0.5, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+}
+.slide-ui .slide.active .content {
+  opacity: 1;
+  max-height: 995px;
+  -webkit-mask: none;
+          mask: none;
+  -webkit-mask-image: none;
+}
+
+

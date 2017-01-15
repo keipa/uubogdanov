@@ -235,8 +235,8 @@
 
 
 .cards {
-  width: 400px;
-  height: 170px;
+  width: 750px;
+  height: 250px;
 {#  position: absolute;#}
   left: 0;
   right: 0;
@@ -268,8 +268,8 @@
   top: 60px;
 }
 .cards_inner .wrap {
-  width: 220px;
-  margin: 0 auto;
+  width: 240px;
+  margin: 0px 0px 0px 40px;
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -335,8 +335,8 @@
   background: -moz-linear-gradient(top, white 0%, #f7f7f7 100%);
   top: 50%;
   margin: auto;
-  width: 220px;
-  height: 130px;
+  width: 670px;
+  height: 260px;
   background: -webkit-linear-gradient(top, white 0%, #f7f7f7 100%);
   border-radius: 12px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.22);
@@ -457,7 +457,7 @@ function on(){
       $(this).css('transform',' rotate(' + x/36 + 'deg)')
     },
     revert:function(valid) {
-      if(x > 60 || x < - 60) {
+      if(x > 40 || x < - 40) {
         el = $(this)
         setTimeout(function(){
           el_class = el.attr('class').split(' ');
